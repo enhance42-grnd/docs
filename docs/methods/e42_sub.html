@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>e42_add method</title>
+
+    <!-- Tangle -->
+    <script type="text/javascript" src="Tangle.js"></script>
+
+    <!-- TangleKit (optional) -->
+    <link rel="stylesheet" href="TangleKit/TangleKit.css" type="text/css">
+    <script type="text/javascript" src="TangleKit/mootools.js"></script>
+    <script type="text/javascript" src="TangleKit/sprintf.js"></script>
+    <script type="text/javascript" src="TangleKit/BVTouchable.js"></script>
+    <script type="text/javascript" src="TangleKit/TangleKit.js"></script>
+
+
+    <script type="text/javascript">
+
+        function setUpTangle () {
+
+            var element1 = document.getElementById("example1");
+
+            var tangle = new Tangle(element1, {
+                initialize: function () {
+                    this.const1 = 2;
+                    this.const2 = 3;
+                },
+                update: function () {
+                    this.sum1 = this.const1 - this.const2;
+                }
+            });
+
+            var element1 = document.getElementById("example2");
+
+            var tangle = new Tangle(element1, {
+                initialize: function () {
+                    this.const3 = 18;
+                    this.const4 = 3;
+                },
+                update: function () {
+                    this.sum2 = this.const3 - this.const4;
+                }
+            });
+
+            var element1 = document.getElementById("example3");
+
+            var tangle = new Tangle(element1, {
+                initialize: function () {
+                    this.const5 = 42;
+                    this.const6 = 8;
+                },
+                update: function () {
+                    this.sum3 = this.const5 - this.const6;
+                }
+            });
+
+            var element1 = document.getElementById("example4");
+
+            var tangle = new Tangle(element1, {
+                initialize: function () {
+                    this.const7 = 20;
+                    this.const8 = 5;
+                },
+                update: function () {
+                    this.sum4 = this.const7 - this.const8;
+                }
+            });
+        }
+
+    </script>
+</head>
+
+<body style="font-size: 42px;" onload="setUpTangle();">
+
+    <p>Try, changing the numbers</p>
+
+    <p id="example1">
+        result = e42_sub(<span data-var="const1" class="TKAdjustableNumber" data-min="0" data-max="100"></span>, <span data-var="const2" class="TKAdjustableNumber" data-min="0" data-max="100"></span>)
+        <br>
+        result: <span data-var="sum1"></span>
+    </p>
+
+    <p id="example2">
+        age = <span data-var="const3" class="TKAdjustableNumber" data-min="0" data-max="100"></span>
+        <br>
+        result = e42_sub(age, <span data-var="const4" class="TKAdjustableNumber" data-min="0" data-max="100"></span>)
+        <br>
+        result: <span data-var="sum2"></span>
+    </p>
+
+    <p id="example3">
+        n = <span data-var="const6" class="TKAdjustableNumber" data-min="0" data-max="100"></span>
+        <br>
+        result = e42_sub(<span data-var="const5" class="TKAdjustableNumber" data-min="0" data-max="100"></span>, n)
+        <br>
+        result: <span data-var="sum3"></span>
+    </p>
+
+    <p id="example4">
+        m = <span data-var="const7" class="TKAdjustableNumber" data-min="0" data-max="100"></span>
+        <br>
+        n = <span data-var="const8" class="TKAdjustableNumber" data-min="0" data-max="100"></span>
+        <br>
+        result = e42_sub(m, n)
+        <br>
+        result: <span data-var="sum4"></span>
+    </p>
+
+</body>
+</html>
